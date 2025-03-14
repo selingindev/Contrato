@@ -13,10 +13,10 @@ import java.util.List;
 public interface ContratoControllers {
     
     public Object Buscar (int id);
-    public Object Inserir (Object obs);
-    public Object Alterar (Object obs);
+    public Object Inserir (Object obj);
+    public Object Alterar (Object obj);
     public Boolean Excluir (int id);
-    public List<Object> Listar (Object obs);
+    public List<Object> Listar (Object obj);
     public List<Object> Listar (String param);
 
 }

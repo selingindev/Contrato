@@ -2,42 +2,42 @@ package contrato.controllers;
 
 import java.util.List;
 
+import contrato.model.daos.DaoPessoaFisica;
+
 public class ControllerPessoaFisica implements ContratoControllers{
+
+    DaoPessoaFisica daoPessoaFisica;
 
     @Override
     public Object Buscar(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Buscar'");
+        daoPessoaFisica = new DaoPessoaFisica();
+        return daoPessoaFisica.Buscar(id);
     }
 
     @Override
-    public Object Inserir(Object obs) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Inserir'");
+    public Object Inserir(Object obj) {
+        daoPessoaFisica = new DaoPessoaFisica();
+        return daoPessoaFisica.Inserir(obs);
     }
 
     @Override
-    public Object Alterar(Object obs) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Alterar'");
+    public Object Alterar(Object obj) {
+        daoPessoaFisica = new DaoPessoaFisica();
     }
 
     @Override
     public Boolean Excluir(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Excluir'");
+         daoPessoaFisica = new DaoPessoaFisica();
     }
 
     @Override
-    public List<Object> Listar(Object obs) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Listar'");
+    public List<Object> Listar(Object obj) {
+        daoPessoaFisica = new DaoPessoaFisica();
     }
 
     @Override
     public List<Object> Listar(String param) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Listar'");
+        daoPessoaFisica = new DaoPessoaFisica();
     }
 
 }

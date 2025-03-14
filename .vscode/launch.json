@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Contrato",
+            "request": "launch",
+            "mainClass": "contrato.Contrato",
+            "projectName": "Contrato_f6509f4e"
+        },
+        {
+            "name": "Dart & Flutter",
+            "request": "launch",
+            "type": "dart",
+            "program": "${workspaceFolder}/lib/main.dart",
+            "cwd": "\\PCDOARTU\\Users\\Arthur Selingin\\Documents\\GitHub\\hub",
+            "args": []
+        }
+    ]
+}

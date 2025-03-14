@@ -5,6 +5,7 @@
 package contrato.model.daos;
 
 import java.util.List;
+import contrato.model.dados.PessoaFisica;
 
 /**
  *
@@ -12,28 +13,39 @@ import java.util.List;
  */
 public class DaoPessoaFisica implements ContratoDaos {
 
+    PessoaFisica pf;
+
     @Override
     public Object Buscar(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Pessoa: " + id);
+        pf = new PessoaFisica(id);
+        return pf;
     }
 
     @Override
-    public Object Inserir(Object obs) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Object Inserir(Object obj) {
+       pf = (PessoaFisica) obj;
+        System.out.println("Pessoa = " + obj.toString());
+        pf.setId(100);
+        return pf;
     }
 
     @Override
-    public Object Alterar(Object obs) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Object Alterar(Object obj) {
+        pf = (PessoaFisica) obj;
+        System.out.println("Pessoa = " + obj.toString());  
+        return pf;
     }
 
     @Override
     public Boolean Excluir(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        pf = new PessoaFisica(id);
+        System.out.println("Pessoa = " + id);
+        return true;
     }
 
     @Override
-    public List<Object> Listar(Object obs) {
+    public List<Object> Listar(Object obj) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

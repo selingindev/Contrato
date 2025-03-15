@@ -80,15 +80,6 @@ public class ManterUsuario implements ContratoInteface {
         Usuario usuSaida = (Usuario) contUsu.Buscar(id);
         JOptionPane.showMessageDialog(null, usuSaida);
     }
-    
-    public boolean validar () {
-        boolean retorno = false;
-        String login = JOptionPane.showInputDialog("Login");
-        String senha = JOptionPane.showInputDialog("Senha");
-        Usuario usu = new Usuario(login,senha);
-        retorno = true;
-        return retorno;
-    }
 
     @Override
     public void listar() {
@@ -107,6 +98,15 @@ public class ManterUsuario implements ContratoInteface {
             JOptionPane.showMessageDialog(null, obj2);
         }
 
+    }
+
+    public boolean validar () {
+        boolean retorno = false;
+        String login = JOptionPane.showInputDialog("Login");
+        String senha = JOptionPane.showInputDialog("Senha");
+        Usuario usu = new Usuario(login,senha);
+        retorno = true;
+        return retorno;
     }
     
 }

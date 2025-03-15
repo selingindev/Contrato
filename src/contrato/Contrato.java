@@ -5,6 +5,7 @@
 package contrato;
 
 import contrato.views.ManterPessoaFisica;
+import contrato.views.ManterPessoaJuridica;
 import contrato.views.ManterUsuario;
 import javax.swing.JOptionPane;
 
@@ -19,6 +20,7 @@ public class Contrato {
      */
      static ManterUsuario mu = new ManterUsuario();
      static ManterPessoaFisica mpf = new ManterPessoaFisica();
+     static ManterPessoaJuridica mpj = new ManterPessoaJuridica();
  
     public static void main(String[] args) {
         if(mu.validar()) {
@@ -35,13 +37,13 @@ public class Contrato {
         msg += "0. Fim \n";
         msg += "1. Usuario \n";
         msg += "2. Pessoa Fisica \n";
-        msg += "3. Usuario-Pessoa \n";
+        msg += "3. Pessoa Juridica \n";
         int opcao = Integer.parseInt(JOptionPane.showInputDialog(msg));
     
         switch(opcao){
             case 1 -> mu.menu();
             case 2 -> mpf.menu();
-            case 3 -> mu.menu();
+            case 3 -> mpj.menu();
             default -> System.out.println("Opção inválida.");
         }
     }

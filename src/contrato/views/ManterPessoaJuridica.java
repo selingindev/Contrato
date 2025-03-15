@@ -3,7 +3,7 @@ package contrato.views;
 import javax.swing.JOptionPane;
 
 import contrato.controllers.ControllerPessoaFisica;
-import contrato.model.dados.PessoaFisica;
+import contrato.model.dados.PessoaJuridica;
 
 public class ManterPessoaJuridica implements ContratoInteface{
 
@@ -31,12 +31,12 @@ public class ManterPessoaJuridica implements ContratoInteface{
     @Override
     public void inserir() {
       String nome =  JOptionPane.showInputDialog("Nome");
-      String cpf = JOptionPane.showInputDialog("cpf");
+      String cnpj = JOptionPane.showInputDialog("cnpj");
       int id = Integer.parseInt(JOptionPane.showInputDialog("id"));
         
       ControllerPessoaFisica cPessoaFisica = new ControllerPessoaFisica();
-      PessoaFisica entradaPF =  new PessoaFisica(id, nome, cpf);
-      PessoaFisica saidaPF = (PessoaFisica) cPessoaFisica.Inserir(entradaPF);
+      PessoaJuridica entradaPF =  new PessoaJuridica(id, nome, cnpj);
+      PessoaJuridica saidaPF = (PessoaJuridica) cPessoaFisica.Inserir(entradaPF);
       JOptionPane.showMessageDialog(null, saidaPF);
     }
 
@@ -60,8 +60,8 @@ public class ManterPessoaJuridica implements ContratoInteface{
 
     @Override
     public void buscar() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'buscar'");
+     
+        
     }
 
     

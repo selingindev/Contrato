@@ -4,7 +4,7 @@ import java.util.List;
 
 import contrato.model.daos.DaoPessoaFisica;
 
-public class ContollerPessoaJurica implements ContratoControllers {
+public class ControllerPessoaJuridica implements ContratoControllers {
     DaoPessoaFisica dPessoaFisica;
 
     @Override

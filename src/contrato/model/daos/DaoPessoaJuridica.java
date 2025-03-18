@@ -1,31 +1,40 @@
 package contrato.model.daos;
 
 import java.util.List;
+;
+import contrato.model.dados.PessoaJuridica;
 
 public class DaoPessoaJuridica implements ContratoDaos {
 
+    PessoaJuridica pj;
+
     @Override
     public Object Buscar(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Buscar'");
+        System.out.println("Pessoa: " + id);
+        pj = new PessoaJuridica(id);
+        return pj;
     }
 
     @Override
     public Object Inserir(Object obj) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Inserir'");
+       pj = (PessoaJuridica) obj;
+        System.out.println("Pessoa = " + obj.toString());
+        pj.setId(100);
+        return pj;
     }
 
     @Override
     public Object Alterar(Object obj) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Alterar'");
+        pj = (PessoaJuridica) obj;
+        System.out.println("Pessoa = " + obj.toString());  
+        return pj;
     }
 
     @Override
     public Boolean Excluir(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'Excluir'");
+        pj = new PessoaJuridica(id);
+        System.out.println("Pessoa = " + id);
+        return true;
     }
 
     @Override

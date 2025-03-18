@@ -1,7 +1,6 @@
 package contrato.model.daos;
 
 import java.util.List;
-;
 import contrato.model.dados.PessoaJuridica;
 
 public class DaoPessoaJuridica implements ContratoDaos {
